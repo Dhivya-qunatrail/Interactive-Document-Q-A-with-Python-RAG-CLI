@@ -74,17 +74,7 @@ May not handle very large documents efficiently
 
 No GUI, CLI only
 
-# 2. Design Choices
-Document why and how you selected key parts of your system:
 
-Tech stack:
-Python, argparse for CLI, custom modules for ingestion, retrieval, and generation, and external APIs/libraries for embeddings and language model integration
-
-LLM selection:
-This project uses Cohere’s "command-r-plus" for generation and "embed-english-v3.0" for embeddings, chosen for their strong language understanding, easy API use, and cost-effectiveness in RAG systems.
-
-Chunking strategy:
-Documents are split into fixed-size text chunks to improve retrieval and make embedding more efficient.
 
 Embedding strategy:
 This project uses Cohere’s embed-english-v3.0 model to convert text chunks into vector embeddings. These embeddings are stored in a vector database and used to retrieve the most relevant chunks based on semantic similarity to the user's query.
